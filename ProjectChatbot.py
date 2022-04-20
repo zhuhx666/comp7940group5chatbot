@@ -70,7 +70,7 @@ def start(update: Update, context: CallbackContext) -> None:
     global name
     name = context.args[0]
     get_message(name)
-    message = 'Welcome to the bot. Attention: input /game to start game. And /show name for score of player.'
+    message = 'Welcome to the bot. The game already start'
     context.bot.send_message(chat_id=update.effective_chat.id, text=message)
 def show(update: Update, context: CallbackContext) -> None:
 
@@ -144,6 +144,9 @@ def play(update, context):
     except Exception as e:
         print(e)
 
+def help_command(update: Update, context: CallbackContext) -> None:
+    """Send a message when the command /help is issued."""
+    update.message.reply_text('Attention: input /start Yourname to start game. input /game the game will begin. And /show Yourname for score of player.')
 
 if __name__ == '__main__':
     main()
