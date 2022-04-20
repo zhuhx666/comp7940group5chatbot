@@ -6,4 +6,4 @@ EXPOSE 80
 RUN pip install pip update
 RUN pip install -r requirements.txt
 ENV ACCESS_TOKEN=5105224852:AAGpK2FUHJe8zyx9sIVBYCf4-q-qlukaZSs
-CMD python chatbot.py
+CMD python ProjectChatbot.py
