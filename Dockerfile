@@ -1,5 +1,5 @@
 FROM python
-COPY chatbot.py ./
+COPY ProjectChatbot.py ./
 COPY requirements.txt ./
 COPY chatbot-cf4ce-firebase-adminsdk-t6b1e-25d55c8560.json ./
 EXPOSE 80
