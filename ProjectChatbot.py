@@ -43,6 +43,7 @@ def main():
     logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                         level=logging.INFO)
 
+    dispatcher.add_handler(CommandHandler('help', help_command))
     dispatcher.add_handler(CommandHandler("start", start))   
     dispatcher.add_handler(CommandHandler('game', game))
     dispatcher.add_handler(CommandHandler('show', show))
